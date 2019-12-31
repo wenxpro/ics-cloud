@@ -4,6 +4,11 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/nacos/pom.xml" />
+        <option value="$PROJECT_DIR$/ics-monitor/pom.xml" />
+        <option value="$PROJECT_DIR$/ics-api/pom.xml" />
+        <option value="$PROJECT_DIR$/ics-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/ics-uaa/pom.xml" />
       </list>
     </option>
   </component>
