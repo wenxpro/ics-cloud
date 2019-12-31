@@ -1,13 +1,13 @@
 package com.ics.cloud.icsmonitor;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class IcsMonitorApplicationTests {
+public class IcsMonitorApplicationTests {
 
     @Test
-    void contextLoads() {
+    public void contextLoads() {
     }
 
 }
