@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ics.cloud.common.dao.Sys_access_logMapper">
+  <resultMap id="BaseResultMap" type="com.ics.cloud.common.model.Sys_access_log">
+    <id column="rid" jdbcType="VARCHAR" property="rid" />
+    <result column="optclasses" jdbcType="VARCHAR" property="optclasses" />
+    <result column="optmethod" jdbcType="VARCHAR" property="optmethod" />
+    <result column="optkey" jdbcType="VARCHAR" property="optkey" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="complettime" jdbcType="TIMESTAMP" property="complettime" />
+    <result column="opthostip" jdbcType="VARCHAR" property="opthostip" />
+    <result column="opthostname" jdbcType="VARCHAR" property="opthostname" />
+    <result column="optusername" jdbcType="VARCHAR" property="optusername" />
+    <result column="optdeptname" jdbcType="VARCHAR" property="optdeptname" />
+    <result column="optuserid" jdbcType="VARCHAR" property="optuserid" />
+    <result column="optdeptid" jdbcType="VARCHAR" property="optdeptid" />
+    <result column="sessionid" jdbcType="VARCHAR" property="sessionid" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.ics.cloud.common.model.Sys_access_log">
+    <result column="optcontent" jdbcType="LONGVARCHAR" property="optcontent" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    rid, optclasses, optmethod, optkey, createtime, complettime, opthostip, opthostname, 
+    optusername, optdeptname, optuserid, optdeptid, sessionid
+  </sql>
+  <sql id="Blob_Column_List">
+    optcontent
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from sys_access_log
+    where rid = #{rid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from sys_access_log
+    where rid = #{rid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.ics.cloud.common.model.Sys_access_log">
+    insert into sys_access_log (rid, optclasses, optmethod, 
+      optkey, createtime, complettime, 
+      opthostip, opthostname, optusername, 
+      optdeptname, optuserid, optdeptid, 
+      sessionid, optcontent)
+    values (#{rid,jdbcType=VARCHAR}, #{optclasses,jdbcType=VARCHAR}, #{optmethod,jdbcType=VARCHAR}, 
+      #{optkey,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, #{complettime,jdbcType=TIMESTAMP}, 
+      #{opthostip,jdbcType=VARCHAR}, #{opthostname,jdbcType=VARCHAR}, #{optusername,jdbcType=VARCHAR}, 
+      #{optdeptname,jdbcType=VARCHAR}, #{optuserid,jdbcType=VARCHAR}, #{optdeptid,jdbcType=VARCHAR}, 
+      #{sessionid,jdbcType=VARCHAR}, #{optcontent,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ics.cloud.common.model.Sys_access_log">
+    insert into sys_access_log
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="rid != null">
+        rid,
+      </if>
+      <if test="optclasses != null">
+        optclasses,
+      </if>
+      <if test="optmethod != null">
+        optmethod,
+      </if>
+      <if test="optkey != null">
+        optkey,
+      </if>
+      <if test="createtime != null">
+        createtime,
+      </if>
+      <if test="complettime != null">
+        complettime,
+      </if>
+      <if test="opthostip != null">
+        opthostip,
+      </if>
+      <if test="opthostname != null">
+        opthostname,
+      </if>
+      <if test="optusername != null">
+        optusername,
+      </if>
+      <if test="optdeptname != null">
+        optdeptname,
+      </if>
+      <if test="optuserid != null">
+        optuserid,
+      </if>
+      <if test="optdeptid != null">
+        optdeptid,
+      </if>
+      <if test="sessionid != null">
+        sessionid,
+      </if>
+      <if test="optcontent != null">
+        optcontent,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="rid != null">
+        #{rid,jdbcType=VARCHAR},
+      </if>
+      <if test="optclasses != null">
+        #{optclasses,jdbcType=VARCHAR},
+      </if>
+      <if test="optmethod != null">
+        #{optmethod,jdbcType=VARCHAR},
+      </if>
+      <if test="optkey != null">
+        #{optkey,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="complettime != null">
+        #{complettime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="opthostip != null">
+        #{opthostip,jdbcType=VARCHAR},
+      </if>
+      <if test="opthostname != null">
+        #{opthostname,jdbcType=VARCHAR},
+      </if>
+      <if test="optusername != null">
+        #{optusername,jdbcType=VARCHAR},
+      </if>
+      <if test="optdeptname != null">
+        #{optdeptname,jdbcType=VARCHAR},
+      </if>
+      <if test="optuserid != null">
+        #{optuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="optdeptid != null">
+        #{optdeptid,jdbcType=VARCHAR},
+      </if>
+      <if test="sessionid != null">
+        #{sessionid,jdbcType=VARCHAR},
+      </if>
+      <if test="optcontent != null">
+        #{optcontent,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ics.cloud.common.model.Sys_access_log">
+    update sys_access_log
+    <set>
+      <if test="optclasses != null">
+        optclasses = #{optclasses,jdbcType=VARCHAR},
+      </if>
+      <if test="optmethod != null">
+        optmethod = #{optmethod,jdbcType=VARCHAR},
+      </if>
+      <if test="optkey != null">
+        optkey = #{optkey,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        createtime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="complettime != null">
+        complettime = #{complettime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="opthostip != null">
+        opthostip = #{opthostip,jdbcType=VARCHAR},
+      </if>
+      <if test="opthostname != null">
+        opthostname = #{opthostname,jdbcType=VARCHAR},
+      </if>
+      <if test="optusername != null">
+        optusername = #{optusername,jdbcType=VARCHAR},
+      </if>
+      <if test="optdeptname != null">
+        optdeptname = #{optdeptname,jdbcType=VARCHAR},
+      </if>
+      <if test="optuserid != null">
+        optuserid = #{optuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="optdeptid != null">
+        optdeptid = #{optdeptid,jdbcType=VARCHAR},
+      </if>
+      <if test="sessionid != null">
+        sessionid = #{sessionid,jdbcType=VARCHAR},
+      </if>
+      <if test="optcontent != null">
+        optcontent = #{optcontent,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where rid = #{rid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.ics.cloud.common.model.Sys_access_log">
+    update sys_access_log
+    set optclasses = #{optclasses,jdbcType=VARCHAR},
+      optmethod = #{optmethod,jdbcType=VARCHAR},
+      optkey = #{optkey,jdbcType=VARCHAR},
+      createtime = #{createtime,jdbcType=TIMESTAMP},
+      complettime = #{complettime,jdbcType=TIMESTAMP},
+      opthostip = #{opthostip,jdbcType=VARCHAR},
+      opthostname = #{opthostname,jdbcType=VARCHAR},
+      optusername = #{optusername,jdbcType=VARCHAR},
+      optdeptname = #{optdeptname,jdbcType=VARCHAR},
+      optuserid = #{optuserid,jdbcType=VARCHAR},
+      optdeptid = #{optdeptid,jdbcType=VARCHAR},
+      sessionid = #{sessionid,jdbcType=VARCHAR},
+      optcontent = #{optcontent,jdbcType=LONGVARCHAR}
+    where rid = #{rid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ics.cloud.common.model.Sys_access_log">
+    update sys_access_log
+    set optclasses = #{optclasses,jdbcType=VARCHAR},
+      optmethod = #{optmethod,jdbcType=VARCHAR},
+      optkey = #{optkey,jdbcType=VARCHAR},
+      createtime = #{createtime,jdbcType=TIMESTAMP},
+      complettime = #{complettime,jdbcType=TIMESTAMP},
+      opthostip = #{opthostip,jdbcType=VARCHAR},
+      opthostname = #{opthostname,jdbcType=VARCHAR},
+      optusername = #{optusername,jdbcType=VARCHAR},
+      optdeptname = #{optdeptname,jdbcType=VARCHAR},
+      optuserid = #{optuserid,jdbcType=VARCHAR},
+      optdeptid = #{optdeptid,jdbcType=VARCHAR},
+      sessionid = #{sessionid,jdbcType=VARCHAR}
+    where rid = #{rid,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -2,31 +2,104 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20fe38d4-94f1-4936-80af-dd5281da2c41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_core_10_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_hystrix_10_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_slf4j_10_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_3_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_spring_3_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_1_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_2_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_openfeign_2_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ics-api/src/main/java/com/ics/cloud/icsapi/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ics-api/src/main/java/com/ics/cloud/icsapi/feign/client/IcsUaaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ics-gateway/src/main/java/com/ics/cloud/icsgateway/filter/AuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ics-gateway/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ics-uaa/src/main/java/com/ics/cloud/icsuaa/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cn_hutool_hutool_all_4_6_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_spring_boot_starter_1_1_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_autoconfigure_1_2_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_starter_1_2_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stephenc_jcip_jcip_annotations_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_nimbus_jose_jwt_6_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_amqp_client_5_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_56.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_56.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_2_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_2_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_2_1_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_2_1_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_1_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_1_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_security_2_1_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_oauth2_2_1_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_security_2_1_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_1_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_1_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_1_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_oauth_boot_spring_security_oauth2_autoconfigure_2_1_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_oauth_spring_security_oauth2_2_3_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_jwt_1_0_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_jwt_1_0_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_core_5_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_jose_5_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/base/BaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/base/BaseCrudMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/base/BasePageRetBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/base/BaseRetBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/bean/HandleBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/bean/ReqParamBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/common/SysAccessLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/common/SysServerLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/dao/Sys_access_logMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/dao/Sys_userMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/model/Sys_access_log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/model/Sys_user.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/system/bean/SysLogBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/system/bean/SysOrgTreeBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/system/bean/SysUserBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/system/bean/UserInfoBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/system/service/SysLogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/util/BPwdUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/util/HttpUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/util/ListUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/util/PageUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/java/com/ics/cloud/common/util/RedisUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/resources/generatorConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/resources/mapper/Sys_access_logMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-common/src/main/resources/mapper/Sys_userMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-uaa/src/main/java/com/ics/cloud/icsuaa/config/OAuth2Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-uaa/src/main/java/com/ics/cloud/icsuaa/config/ResourceServerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-uaa/src/main/java/com/ics/cloud/icsuaa/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-uaa/src/main/java/com/ics/cloud/icsuaa/controller/IcsUaaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-uaa/src/main/java/com/ics/cloud/icsuaa/enhancer/TokenEnhancer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ics-uaa/src/main/java/com/ics/cloud/icsuaa/service/UserServiceDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ics-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ics-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ics-api/src/main/java/com/ics/cloud/icsapi/IcsApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ics-api/src/main/java/com/ics/cloud/icsapi/IcsApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ics-api/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ics-api/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ics-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ics-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ics-gateway/src/main/java/com/ics/cloud/icsgateway/IcsGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ics-gateway/src/main/java/com/ics/cloud/icsgateway/IcsGatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ics-gateway/src/main/resources/bootstrap.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ics-uaa/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ics-uaa/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ics-api/src/main/java/com/ics/cloud/icsapi/controller/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ics-api/src/main/java/com/ics/cloud/icsapi/feign/client/IcsUaaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ics-common/ics-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ics-common/ics-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ics-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ics-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ics-uaa/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ics-uaa/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ics-uaa/src/main/java/com/ics/cloud/icsuaa/IcsUaaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ics-uaa/src/main/java/com/ics/cloud/icsuaa/IcsUaaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ics-uaa/src/main/java/com/ics/cloud/icsuaa/controller/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ics-uaa/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ics-uaa/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,19 +157,28 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../inc-cloud" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ics.cloud.common.enhancer" />
+      <recent name="com.ics.cloud.common.config" />
+      <recent name="com.ics.cloud.icsuaa.service" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\idea-workspace\ics-cloud\ics-gateway\src\main\resources" />
-      <recent name="E:\idea-workspace\ics-cloud\ics-monitor\src\main\resources" />
-      <recent name="E:\idea-workspace\ics-cloud\ics-uaa\src\main\resources" />
-      <recent name="E:\idea-workspace\ics-cloud\ics-api\src\main\resources" />
+      <recent name="E:\idea-workspace\ics-cloud\ics-common\src\main\java\com\ics\cloud\common\system" />
+      <recent name="E:\idea-workspace\ics-cloud\ics-common\src\main\java\com\ics\cloud\common\base" />
+      <recent name="E:\idea-workspace\ics-cloud\ics-common\src\main\java\com\ics\cloud\common\bean" />
+      <recent name="E:\idea-workspace\ics-cloud\ics-common\src\main\java\com\ics\cloud\common\util" />
+      <recent name="E:\idea-workspace\ics-cloud\ics-common\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.IcsGatewayApplication">
+  <component name="RunManager" selected="Spring Boot.IcsUaaApplication">
     <configuration name="IcsApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="ics-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ics.cloud.icsapi.IcsApiApplication" />
@@ -156,7 +238,7 @@
       <updated>1576835429636</updated>
       <workItem from="1576835435619" duration="1468000" />
       <workItem from="1577756624163" duration="12482000" />
-      <workItem from="1577929411891" duration="6374000" />
+      <workItem from="1577929411891" duration="17366000" />
     </task>
     <task id="LOCAL-00001" summary="add:子模块添加">
       <created>1577782439651</created>
@@ -179,20 +261,68 @@
       <option name="project" value="LOCAL" />
       <updated>1577787157330</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="mod:配置文件 由.propertie 改为 .yml">
+      <created>1577946593452</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577946593452</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:E:/idea-workspace/ics-cloud/ics-api" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add:子模块添加" />
     <MESSAGE value="mod:uaa 改用postgresql" />
     <MESSAGE value="mod:依赖修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="mod:依赖修改" />
+    <MESSAGE value="mod:配置文件 由.propertie 改为 .yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="mod:配置文件 由.propertie 改为 .yml" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#Project_Structure" timestamp="1577952708243">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1577952708243" />
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577782282949">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -201,50 +331,70 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="406" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1577762701439" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1577787155120">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1577946590059">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1577787155120" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1577776656354">
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1577946590059" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1577960235732">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1577776656354" />
-    <state width="1323" height="235" key="GridCell.Tab.0.bottom" timestamp="1577946547884">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1577960235732" />
+    <state width="1323" height="248" key="GridCell.Tab.0.bottom" timestamp="1577960680060">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="235" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1577946547884" />
-    <state width="1323" height="235" key="GridCell.Tab.0.center" timestamp="1577946547884">
+    <state width="1323" height="248" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1577960680060" />
+    <state width="1323" height="248" key="GridCell.Tab.0.center" timestamp="1577960680060">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="235" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1577946547884" />
-    <state width="1323" height="235" key="GridCell.Tab.0.left" timestamp="1577946547884">
+    <state width="1323" height="248" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1577960680060" />
+    <state width="1323" height="248" key="GridCell.Tab.0.left" timestamp="1577960680060">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="235" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1577946547884" />
-    <state width="1323" height="235" key="GridCell.Tab.0.right" timestamp="1577946547884">
+    <state width="1323" height="248" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1577960680060" />
+    <state width="1323" height="248" key="GridCell.Tab.0.right" timestamp="1577960680060">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="235" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1577946547884" />
-    <state width="1323" height="235" key="GridCell.Tab.1.bottom" timestamp="1577946547885">
+    <state width="1323" height="248" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1577960680060" />
+    <state width="1323" height="248" key="GridCell.Tab.1.bottom" timestamp="1577960680060">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="235" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1577946547885" />
-    <state width="1323" height="235" key="GridCell.Tab.1.center" timestamp="1577946547884">
+    <state width="1323" height="248" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1577960680060" />
+    <state width="1323" height="248" key="GridCell.Tab.1.center" timestamp="1577960680060">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="235" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1577946547884" />
-    <state width="1323" height="235" key="GridCell.Tab.1.left" timestamp="1577946547884">
+    <state width="1323" height="248" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1577960680060" />
+    <state width="1323" height="248" key="GridCell.Tab.1.left" timestamp="1577960680060">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="235" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1577946547884" />
-    <state width="1323" height="235" key="GridCell.Tab.1.right" timestamp="1577946547884">
+    <state width="1323" height="248" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1577960680060" />
+    <state width="1323" height="248" key="GridCell.Tab.1.right" timestamp="1577960680060">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="235" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1577946547884" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1577787158525">
+    <state width="1323" height="248" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1577960680060" />
+    <state width="1323" height="269" key="GridCell.Tab.2.bottom" timestamp="1577956775876">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1577787158525" />
+    <state width="1323" height="269" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1577956775876" />
+    <state width="1323" height="269" key="GridCell.Tab.2.center" timestamp="1577956775875">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="269" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1577956775875" />
+    <state width="1323" height="269" key="GridCell.Tab.2.left" timestamp="1577956775875">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="269" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1577956775875" />
+    <state width="1323" height="269" key="GridCell.Tab.2.right" timestamp="1577956775876">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="269" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1577956775876" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1577954192504">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1577954192504" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1577946596288">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1577946596288" />
     <state x="47" y="101" key="new project wizard" timestamp="1577782386358">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
