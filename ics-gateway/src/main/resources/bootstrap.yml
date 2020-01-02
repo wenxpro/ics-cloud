@@ -1,0 +1,31 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: ics-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        server-addr: localhost:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: ics-api
+          uri: lb://ics-api
+          predicates:
+            - Method=GET,POST
+            - Path=/api/**
+          filters:
+            - StripPrefix=1
+        - id: ics-uaa
+          uri: lb://ics-uaa
+          predicates:
+            - Method=GET,POST
+            - Path=/uaa/**
+          filters:
+            - StripPrefix=1

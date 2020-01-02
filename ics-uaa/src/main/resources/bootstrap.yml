@@ -1,0 +1,19 @@
+server.port: 8082
+
+spring:
+  application:
+    name: ics-uaa
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+      discovery:
+        server-addr: localhost:8848
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ics
+    username: postgres
+    password: admin
+    driverClassName: org.postgresql.Driver
+
+management.endpoints.web.exposure.include: "*"
+
