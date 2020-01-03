@@ -17,19 +17,22 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
+import javax.annotation.Resource;
+
 
 @Component
 @Slf4j
-public class AuthFilter implements GlobalFilter, Ordered {
+public class AuthConvertFilter implements GlobalFilter, Ordered {
 
-    @Autowired
+    @Resource
     private RedisTemplate<String,Object> redisTemplate;
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 
         String token = exchange.getRequest().getQueryParams().getFirst("token");
-
+        String uri = exchange.getRequest().getURI().toString();
+        log.debug("request uri : {}",  uri);
         ServerHttpResponse response = exchange.getResponse();
         BaseRetBean baseRetBean = new BaseRetBean();
 

@@ -9,10 +9,16 @@ spring:
   application:
     name: ics-gateway
   redis:
-    host: 127.0.0.1
+    host: localhost
     password:
     port: 6379
-    database: 0
+    database: 1
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 1
   cloud:
     nacos:
       discovery:
@@ -52,8 +58,10 @@ spring:
 logging:
   level:
     com.chinasoftinc: DEBUG
+    web: debug
   #    com.netflix: DEBUG
   #    org.springframework.cloud.gateway: trace
   file: ics-gateway/log/log.log
+
 
 management.endpoints.web.exposure.include: '*'

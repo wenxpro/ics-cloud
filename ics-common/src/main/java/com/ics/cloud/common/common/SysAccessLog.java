@@ -27,7 +27,7 @@ public class SysAccessLog {
     @Autowired
     private AmqpTemplate rabbitTemplate;
 
-    @Pointcut("execution (* com.ics..*Controller.*(..))")
+    @Pointcut("execution (* com.ics.cloud..*Controller.*(..))")
     public void AppAccessLog() {
     }
 

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class SysServerLog {
 
-    @Pointcut("execution (* com.ics..*Service.*(..))")
+    @Pointcut("execution (* com.ics.cloud..*Service.*(..))")
     public void SysServerLog() {
     }
 
