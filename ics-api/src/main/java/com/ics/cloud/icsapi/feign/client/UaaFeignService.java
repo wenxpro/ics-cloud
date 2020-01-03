@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
-@FeignClient(value = "inc-uaa", fallback = UaaFeignServiceFullback.class,configuration = FeignOAuth2RequestInterceptor.class)
+@FeignClient(value = "ics-uaa", fallback = UaaFeignServiceFullback.class,configuration = FeignOAuth2RequestInterceptor.class)
 public interface UaaFeignService {
 
     @PostMapping("/oauth/token")

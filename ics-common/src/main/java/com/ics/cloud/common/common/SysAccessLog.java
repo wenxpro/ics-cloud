@@ -67,7 +67,7 @@ public class SysAccessLog {
             long etime = System.currentTimeMillis();
             model.setComplettime(DateUtil.date());
             rabbitTemplate.convertAndSend("log-queue", JSON.toJSONString(model));
-            log.debug("[ACTION_TIME] : {}", (etime - stime) + "ms");
+            log.info("[ACTION_TIME] : {}", (etime - stime) + "ms");
         }
     }
 }

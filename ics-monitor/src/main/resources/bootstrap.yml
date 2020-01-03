@@ -89,8 +89,6 @@ security:
       jwt:
         key-uri: ${auth-server}/oauth/token_key
 
-
-
 management.endpoints.web.exposure.include: "*"
 
 logging:

@@ -20,9 +20,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
     @Override
     public void configure(ResourceServerSecurityConfigurer resourceServerSecurityConfigurer) {
-        resourceServerSecurityConfigurer
-                .tokenStore(tokenStore)
-                .resourceId("ics-uaa");
+        resourceServerSecurityConfigurer.tokenStore(tokenStore).resourceId("ics-uaa");
     }
 
     @Override
