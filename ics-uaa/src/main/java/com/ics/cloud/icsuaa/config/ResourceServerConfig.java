@@ -28,7 +28,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
         log.debug("HttpSecurity configure method");
         http.csrf().disable();
         http.authorizeRequests()
-                .antMatchers("/actuator/**").permitAll()
+                .antMatchers("/actuator/**","/oauth/**").permitAll()
                 .anyRequest().authenticated();
     }
 

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class UaaFeignServiceFullback implements UaaFeignService {
 
     @Override
-    public JWT getToken(String type, String username, String password) {
+    public JWT getToken(String cilentid,String clientsecret,String type, String username, String password) {
         return null;
     }
 }

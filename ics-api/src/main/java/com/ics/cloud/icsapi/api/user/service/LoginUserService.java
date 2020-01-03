@@ -51,7 +51,7 @@ public class LoginUserService {
         if (!BPwdUtil.matches(password, user.getPassword())) {
             log.debug("用户：{} 登录密码错误", username);
         }
-        JWT jwt = uaaFeignService.getToken("password", username, password);
+        JWT jwt = uaaFeignService.getToken("ics-api","123456","password", username, password);
         if (jwt == null) {
             log.debug("用户：{} token 签发错误", username);
             return null;
