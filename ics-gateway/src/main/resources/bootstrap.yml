@@ -57,11 +57,9 @@ spring:
 
 logging:
   level:
-    com.chinasoftinc: DEBUG
-    web: debug
+    com.ics.cloud: DEBUG
   #    com.netflix: DEBUG
   #    org.springframework.cloud.gateway: trace
-  file: ics-gateway/log/log.log
-
+  file: log/ics-gateway/log.log
 
 management.endpoints.web.exposure.include: '*'

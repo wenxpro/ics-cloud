@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/ics-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ics-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ics-monitor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ics-task/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ics-uaa/src/main/java" charset="UTF-8" />
   </component>
 </project>

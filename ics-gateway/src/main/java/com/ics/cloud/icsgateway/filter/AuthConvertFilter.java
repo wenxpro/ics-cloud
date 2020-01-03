@@ -1,6 +1,7 @@
 package com.ics.cloud.icsgateway.filter;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.ics.cloud.icsgateway.bean.BaseRetBean;
 import com.ics.cloud.icsgateway.bean.UserLoginBean;
 import lombok.extern.slf4j.Slf4j;
@@ -34,37 +35,37 @@ public class AuthConvertFilter implements GlobalFilter, Ordered {
         String uri = exchange.getRequest().getURI().toString();
         log.debug("request uri : {}",  uri);
         ServerHttpResponse response = exchange.getResponse();
-        BaseRetBean baseRetBean = new BaseRetBean();
+        JSONObject result = new JSONObject();
 
         if (token == null || token.isEmpty()) {
             // 错误信息
-            baseRetBean.setRet(6);
-            baseRetBean.setMsg("token错误");
+            result.put("ret",6);
+            result.put("msg","token错误");
             try {
                 // 返回错误信息
                 response.setStatusCode(HttpStatus.UNAUTHORIZED); //设置浏览器返回的回执码
                 response.getHeaders().add("Content-Type", "application/json;charset=UTF-8");
-                DataBuffer buffer = response.bufferFactory().wrap(JSON.toJSONString(baseRetBean).getBytes());
+                DataBuffer buffer = response.bufferFactory().wrap(result.toString().getBytes());
                 return response.writeWith(Mono.just(buffer));
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
         if (!redisTemplate.hasKey(token)) {
-            baseRetBean.setRet(2);
-            baseRetBean.setMsg("会话过期，请重新登录");
+            result.put("ret",2);
+            result.put("msg","会话过期，请重新登录");
             // 返回错误信息
             response.getHeaders().add("Content-Type", "application/json;charset=UTF-8");
-            DataBuffer buffer = response.bufferFactory().wrap(JSON.toJSONString(baseRetBean).getBytes());
+            DataBuffer buffer = response.bufferFactory().wrap(result.toString().getBytes());
             return response.writeWith(Mono.just(buffer));
         }
         UserLoginBean userLoginBean = (UserLoginBean) redisTemplate.opsForValue().get(token);
         if (userLoginBean == null) {
-            baseRetBean.setRet(6);
-            baseRetBean.setMsg("非法用户");
+            result.put("ret",6);
+            result.put("msg","非法用户");
             // 返回错误信息
             response.getHeaders().add("Content-Type", "application/json;charset=UTF-8");
-            DataBuffer buffer = response.bufferFactory().wrap(JSON.toJSONString(baseRetBean).getBytes());
+            DataBuffer buffer = response.bufferFactory().wrap(result.toString().getBytes());
             return response.writeWith(Mono.just(buffer));
         }
         log.debug("loginBean:{}",userLoginBean.getUser());

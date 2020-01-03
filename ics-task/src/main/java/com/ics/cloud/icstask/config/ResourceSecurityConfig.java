@@ -1,6 +1,6 @@
-package com.ics.cloud.icsmonitor.config;
+package com.ics.cloud.icstask.config;
 
-import com.ics.cloud.icsmonitor.enhancer.TokenEnhancer;
+import com.ics.cloud.icstask.enhancer.TokenEnhancer;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties;

@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/ics-common/ics-common.iml" filepath="$PROJECT_DIR$/ics-common/ics-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/ics-gateway/ics-gateway.iml" filepath="$PROJECT_DIR$/ics-gateway/ics-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/ics-monitor/ics-monitor.iml" filepath="$PROJECT_DIR$/ics-monitor/ics-monitor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ics-task/ics-task.iml" filepath="$PROJECT_DIR$/ics-task/ics-task.iml" />
       <module fileurl="file://$PROJECT_DIR$/ics-uaa/ics-uaa.iml" filepath="$PROJECT_DIR$/ics-uaa/ics-uaa.iml" />
     </modules>
   </component>

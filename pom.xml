@@ -20,6 +20,7 @@
         <module>ics-gateway</module>
         <module>ics-monitor</module>
         <module>ics-uaa</module>
+        <module>ics-task</module>
     </modules>
 
     <properties>

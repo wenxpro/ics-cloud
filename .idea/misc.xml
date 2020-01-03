@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/ics-api/pom.xml" />
         <option value="$PROJECT_DIR$/ics-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/ics-uaa/pom.xml" />
+        <option value="$PROJECT_DIR$/ics-task/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

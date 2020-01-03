@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ics.cloud</groupId>
-    <artifactId>ics-monitor</artifactId>
+    <artifactId>ics-task</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ics-monitor</name>
-    <description>ics cloud 监控服务</description>
+    <name>ics-task</name>
+    <description>ics cloud 任务调度服务 通过行锁进行分布式task</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -52,7 +52,20 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+        </dependency>
 
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz-jobs</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
         <!-- Spring Cloud Begin -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
