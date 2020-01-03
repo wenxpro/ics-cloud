@@ -98,3 +98,6 @@ logging:
     com.inc.cloud: debug
 #    org.springframework.web: debug
 #    org.springframework.security: DEBUG
+
+sys-config:
+  tokenkeyPrefex: token

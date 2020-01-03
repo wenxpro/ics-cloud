@@ -1,7 +1,5 @@
-package com.ics.cloud.icsapi.api.user.bean;
+package com.ics.cloud.icsgateway.bean;
 
-import com.ics.cloud.common.bean.JWT;
-import com.ics.cloud.common.model.Sys_user;
 import lombok.Getter;
 import lombok.Setter;
 

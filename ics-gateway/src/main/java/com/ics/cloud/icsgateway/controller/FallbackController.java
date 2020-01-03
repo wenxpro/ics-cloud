@@ -1,7 +1,7 @@
-package com.ics.cloud.icsgateway.filter.controller;
+package com.ics.cloud.icsgateway.controller;
 
-import com.ics.cloud.icsgateway.filter.bean.ResultEnum;
-import com.ics.cloud.icsgateway.filter.bean.ResultView;
+import com.ics.cloud.icsgateway.bean.ResultEnum;
+import com.ics.cloud.icsgateway.bean.ResultView;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

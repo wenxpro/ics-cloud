@@ -62,21 +62,17 @@ public class LoginUserService {
         loginBean.setUser(user);
         loginBean.setJwt(jwt);
 
-        String logintokken = StrUtil.uuid().replace("-", "");
+        String token = StrUtil.uuid().replace("-", "");
 
-        loginBean.setLogin_token(logintokken);
-        redisUtil.set(sysConfig.getLoginPrefix() + "::" + logintokken, loginBean, 24 * 60 * 60);
+        redisUtil.set(sysConfig.getTokenkeyPrefex() + "::" + token, loginBean, 24 * 60 * 60);
 
         //写session
         HttpSession session = request.getSession();
         session.setAttribute(sysConfig.getTokenkeyPrefex(), jwt.getAccess_token());
-        session.setAttribute(sysConfig.getLoginPrefix(), logintokken);
         //写cookie
         HttpUtil.addCookie(response, sysConfig.getTokenkeyPrefex(), jwt.getAccess_token());
-        HttpUtil.addCookie(response, sysConfig.getLoginPrefix(), logintokken);
         //写header
         response.setHeader(sysConfig.getTokenkeyPrefex(), jwt.getAccess_token());
-        response.setHeader(sysConfig.getLoginPrefix(), logintokken);
 
         return loginBean;
     }

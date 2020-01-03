@@ -13,8 +13,4 @@ public class IcsUaaController {
         return principal;
     }
 
-    @GetMapping("/test")
-    public String test(){
-        return "test ";
-    }
 }

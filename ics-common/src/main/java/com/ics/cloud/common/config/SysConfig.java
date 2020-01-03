@@ -8,14 +8,10 @@ import org.springframework.stereotype.Component;
 @Setter
 @Getter
 @Component
-@ConfigurationProperties(prefix = "sys")
+@ConfigurationProperties(prefix = "sys-config")
 public class SysConfig {
 
     private String tokenExcepPattern;
     private String tokenkeyPrefex;
-    private String token;
-    private String clientid;
-    private String clientsecret;
-    private String loginPrefix;
 
 }

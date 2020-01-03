@@ -1,4 +1,4 @@
-package com.ics.cloud.icsgateway.filter.bean;
+package com.ics.cloud.icsgateway.bean;
 
 /**
  * 结果视图类
