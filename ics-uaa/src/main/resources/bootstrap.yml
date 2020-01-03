@@ -29,6 +29,6 @@ logging:
     com.ics.cloud: debug
 #    org.springframework.web: debug
 #    org.springframework.security: DEBUG
-
+  file: log/ics-uaa/log.log
 management.endpoints.web.exposure.include: "*"
 
