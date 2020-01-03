@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ics-monitor" />
         <module name="ics-uaa" />
-        <module name="ics-web" />
         <module name="ics-gateway" />
         <module name="ics-api" />
         <module name="ics-common" />

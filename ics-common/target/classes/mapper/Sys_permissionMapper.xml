@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ics.cloud.common.dao.Sys_permissionMapper">
+  <resultMap id="BaseResultMap" type="com.ics.cloud.common.model.Sys_permission">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="create_date" />
+    <result column="create_userid" jdbcType="VARCHAR" property="create_userid" />
+    <result column="del_date" jdbcType="TIMESTAMP" property="del_date" />
+    <result column="del_uerid" jdbcType="VARCHAR" property="del_uerid" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, name, description, create_date, create_userid, del_date, del_uerid, status
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sys_permission
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from sys_permission
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.ics.cloud.common.model.Sys_permission">
+    insert into sys_permission (id, name, description, 
+      create_date, create_userid, del_date, 
+      del_uerid, status)
+    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, 
+      #{create_date,jdbcType=TIMESTAMP}, #{create_userid,jdbcType=VARCHAR}, #{del_date,jdbcType=TIMESTAMP}, 
+      #{del_uerid,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ics.cloud.common.model.Sys_permission">
+    insert into sys_permission
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="create_date != null">
+        create_date,
+      </if>
+      <if test="create_userid != null">
+        create_userid,
+      </if>
+      <if test="del_date != null">
+        del_date,
+      </if>
+      <if test="del_uerid != null">
+        del_uerid,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="create_date != null">
+        #{create_date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="create_userid != null">
+        #{create_userid,jdbcType=VARCHAR},
+      </if>
+      <if test="del_date != null">
+        #{del_date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="del_uerid != null">
+        #{del_uerid,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ics.cloud.common.model.Sys_permission">
+    update sys_permission
+    <set>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="create_date != null">
+        create_date = #{create_date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="create_userid != null">
+        create_userid = #{create_userid,jdbcType=VARCHAR},
+      </if>
+      <if test="del_date != null">
+        del_date = #{del_date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="del_uerid != null">
+        del_uerid = #{del_uerid,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ics.cloud.common.model.Sys_permission">
+    update sys_permission
+    set name = #{name,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      create_date = #{create_date,jdbcType=TIMESTAMP},
+      create_userid = #{create_userid,jdbcType=VARCHAR},
+      del_date = #{del_date,jdbcType=TIMESTAMP},
+      del_uerid = #{del_uerid,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

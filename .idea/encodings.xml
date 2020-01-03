@@ -2,11 +2,9 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/ics-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ics-auth/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ics-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ics-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ics-monitor/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ics-uaa/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ics-web/src/main/java" charset="UTF-8" />
   </component>
 </project>

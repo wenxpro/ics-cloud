@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
@@ -22,6 +23,15 @@ import java.util.Arrays;
 public class ResourceSecurityConfig extends ResourceServerConfigurerAdapter {
 
     private @NonNull ResourceServerProperties resourceServerProperties;
+
+    @Override
+    public void configure(HttpSecurity http) throws Exception {
+        http.csrf().disable()
+                .authorizeRequests()
+                .antMatchers("/user/login", "/user/register").permitAll()
+                .antMatchers("/**").authenticated()
+        ;
+    }
 
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {

@@ -11,7 +11,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableAuthorizationServer
-@ServletComponentScan(basePackages = {"com.inc.cloud"})
+@ServletComponentScan(basePackages = {"com.ics.cloud"})
 @MapperScan(basePackages = {"com.ics.cloud.common.dao"})
 public class IcsUaaApplication {
 
