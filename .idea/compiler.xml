@@ -6,34 +6,39 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ics-common" />
         <module name="ics-monitor" />
+        <module name="ics-uaa" />
+        <module name="ics-web" />
         <module name="ics-gateway" />
         <module name="ics-api" />
-        <module name="ics-uaa" />
+        <module name="ics-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="alibaba-dependencies" target="1.8" />
       <module name="ics-api" target="1.8" />
+      <module name="ics-auth" target="1.8" />
       <module name="ics-cloud" target="1.8" />
       <module name="ics-common" target="1.8" />
       <module name="ics-gateway" target="1.8" />
       <module name="ics-monitor" target="1.8" />
       <module name="ics-nacos" target="1.8" />
       <module name="ics-uaa" target="1.8" />
+      <module name="ics-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="alibaba-dependencies" options="-parameters" />
       <module name="ics-api" options="-parameters" />
+      <module name="ics-auth" options="" />
       <module name="ics-cloud" options="" />
       <module name="ics-common" options="-parameters" />
       <module name="ics-gateway" options="-parameters" />
       <module name="ics-monitor" options="-parameters" />
       <module name="ics-nacos" options="-parameters" />
       <module name="ics-uaa" options="-parameters" />
+      <module name="ics-web" options="-parameters" />
     </option>
   </component>
 </project>

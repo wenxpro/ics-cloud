@@ -27,6 +27,7 @@ spring:
 logging:
   level:
     com.inc.cloud: debug
+#    org.springframework.web: debug
 #    org.springframework.security: DEBUG
 
 management.endpoints.web.exposure.include: "*"

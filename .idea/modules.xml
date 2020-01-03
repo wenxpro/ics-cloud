@@ -3,11 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ics-api/ics-api.iml" filepath="$PROJECT_DIR$/ics-api/ics-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ics-auth/ics-auth.iml" filepath="$PROJECT_DIR$/ics-auth/ics-auth.iml" />
       <module fileurl="file://$PROJECT_DIR$/ics-cloud.iml" filepath="$PROJECT_DIR$/ics-cloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/ics-common/ics-common.iml" filepath="$PROJECT_DIR$/ics-common/ics-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/ics-gateway/ics-gateway.iml" filepath="$PROJECT_DIR$/ics-gateway/ics-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/ics-monitor/ics-monitor.iml" filepath="$PROJECT_DIR$/ics-monitor/ics-monitor.iml" />
       <module fileurl="file://$PROJECT_DIR$/ics-uaa/ics-uaa.iml" filepath="$PROJECT_DIR$/ics-uaa/ics-uaa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ics-web/ics-web.iml" filepath="$PROJECT_DIR$/ics-web/ics-web.iml" />
     </modules>
   </component>
 </project>

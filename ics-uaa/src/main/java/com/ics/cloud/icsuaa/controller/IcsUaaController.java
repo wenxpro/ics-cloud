@@ -12,4 +12,9 @@ public class IcsUaaController {
     public Principal user(Principal principal) {
         return principal;
     }
+
+    @GetMapping("/test")
+    public String test(){
+        return "test ";
+    }
 }

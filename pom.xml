@@ -17,6 +17,8 @@
     <modules>
         <module>ics-api</module>
         <module>ics-common</module>
+        <module>ics-auth</module>
+        <module>ics-web</module>
     </modules>
 
     <properties>

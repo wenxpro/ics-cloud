@@ -1,6 +1,7 @@
 server:
   port: 8081
 
+auth-server: http://localhost:8082
 
 spring:
   application:
@@ -17,5 +18,27 @@ spring:
     password: admin
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+security:
+  oauth2:
+    client:
+      client-id: ics-api
+      client-secret: 123456
+      user-authorization-uri: ${auth-server}/oauth/authorize
+      access-token-uri: ${auth-server}/oauth/token
+      grant-type: authorization_code,password,refresh_token
+      scope: all
+    resource:
+      token-info-uri: ${auth-server}/oauth/check_token
+      id: ics-api
+      jwt:
+        key-uri: ${auth-server}/oauth/token_key
+
+
+
 management.endpoints.web.exposure.include: "*"
 
+logging:
+  level:
+    com.inc.cloud: debug
+#    org.springframework.web: debug
+#    org.springframework.security: DEBUG
