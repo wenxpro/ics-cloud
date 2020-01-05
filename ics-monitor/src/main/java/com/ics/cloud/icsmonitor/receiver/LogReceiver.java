@@ -22,7 +22,7 @@ public class LogReceiver {
     public void process(String message) {
         Sys_access_log accessLog = JSON.parseObject(message, Sys_access_log.class);
         try {
-            sysAccessLogMapper.insert(accessLog);
+            sysAccessLogMapper.insertSelective(accessLog);
         } catch (Exception e) {
             log.debug("日志收集错误:{}", e);
         }

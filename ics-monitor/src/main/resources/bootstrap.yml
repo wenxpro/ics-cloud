@@ -1,6 +1,10 @@
 server:
   port: 8084
 
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.ics.cloud.common.model
+
 auth-server: http://localhost:8082
 
 spring:
