@@ -19,7 +19,18 @@ spring:
       config:
         server-addr: localhost:8848
       discovery:
-        server-addr: localhost:8848
+        server-addr: ${spring.cloud.nacos.config.server-addr}
+    sentinel:
+      transport:
+        dashboard: localhost:8888
+      eager: true
+      datasource.ds.nacos:
+        server-addr: ${spring.cloud.nacos.config.server-addr}
+        dataId: ${spring.application.name}-sentinel
+        groupId: DEFAULT_GROUP
+        ruleType: flow
+
+
   datasource:
     url: jdbc:mysql://localhost:3306/inc?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT
     username: root
@@ -85,7 +96,7 @@ auth-server: http://localhost:8082
 security:
   oauth2:
     client:
-      client-id: ics-api
+      client-id: ${spring.application.name}
       client-secret: 123456
       user-authorization-uri: ${auth-server}/oauth/authorize
       access-token-uri: ${auth-server}/oauth/token
@@ -93,7 +104,7 @@ security:
       scope: all
     resource:
       token-info-uri: ${auth-server}/oauth/check_token
-      id: ics-api
+      id: ${spring.application.name}
       jwt:
         key-uri: ${auth-server}/oauth/token_key
 
@@ -103,8 +114,9 @@ management.endpoints.web.exposure.include: "*"
 logging:
   level:
     com.ics.cloud: debug
-    org.springframework.web: debug
-    org.springframework.security: DEBUG
+#    org.springframework.web: debug
+#    org.springframework.security: DEBUG
   file: log/ics-api/log.log
+
 sys-config:
   tokenkeyPrefex: token

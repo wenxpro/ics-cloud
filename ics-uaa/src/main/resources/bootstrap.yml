@@ -12,7 +12,16 @@ spring:
       config:
         server-addr: localhost:8848
       discovery:
-        server-addr: localhost:8848
+        server-addr: ${spring.cloud.nacos.config.server-addr}
+    sentinel:
+      transport:
+        dashboard: localhost:8888
+      eager: true
+      datasource.ds.nacos:
+        server-addr: ${spring.cloud.nacos.config.server-addr}
+        dataId: ${spring.application.name}-sentinel
+        groupId: DEFAULT_GROUP
+        ruleType: flow
 #  datasource:
 #    url: jdbc:postgresql://localhost:5432/ics
 #    username: postgres

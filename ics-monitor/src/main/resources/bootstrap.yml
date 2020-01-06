@@ -16,6 +16,15 @@ spring:
         server-addr: localhost:8848
       discovery:
         server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8888
+      eager: true
+      datasource.ds.nacos:
+        server-addr: ${spring.cloud.nacos.config.server-addr}
+        dataId: ${spring.application.name}-sentinel
+        groupId: DEFAULT_GROUP
+        ruleType: flow
   datasource:
     url: jdbc:mysql://localhost:3306/inc?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT
     username: root
