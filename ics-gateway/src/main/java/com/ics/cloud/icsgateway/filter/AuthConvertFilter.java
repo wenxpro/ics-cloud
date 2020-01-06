@@ -2,38 +2,103 @@ package com.ics.cloud.icsgateway.filter;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.ics.cloud.icsgateway.bean.BaseRetBean;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.ics.cloud.icsgateway.bean.UserLoginBean;
+import com.ics.cloud.icsgateway.config.SysConfig;
+import io.netty.buffer.ByteBufAllocator;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.Ordered;
 import org.springframework.core.io.buffer.DataBuffer;
+import org.springframework.core.io.buffer.NettyDataBufferFactory;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
+import org.springframework.http.server.reactive.ServerHttpRequestDecorator;
 import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Component;
+import org.springframework.util.AntPathMatcher;
+import org.springframework.util.MultiValueMap;
+import org.springframework.util.StreamUtils;
 import org.springframework.web.server.ServerWebExchange;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import javax.annotation.Resource;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.InetSocketAddress;
+import java.nio.charset.StandardCharsets;
+import java.util.function.Consumer;
 
 
 @Component
 @Slf4j
 public class AuthConvertFilter implements GlobalFilter, Ordered {
 
+    @Autowired
+    private SysConfig sysConfig;
     @Resource
     private RedisTemplate<String,Object> redisTemplate;
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 
-        String token = exchange.getRequest().getQueryParams().getFirst("token");
-        String uri = exchange.getRequest().getURI().toString();
+        ServerHttpRequest request = exchange.getRequest();
+        String uri = request.getURI().toString();
+        String path = request.getURI().getPath();
+        HttpMethod method = exchange.getRequest().getMethod();
+        StringBuilder builder = new StringBuilder();
+
+        if(HttpMethod.GET.equals(method)){
+            builder.append(JSON.toJSONString(request.getQueryParams()));
+        }else{
+            Flux<DataBuffer> body = request.getBody();
+            ServerHttpRequest serverHttpRequest = request.mutate().uri(request.getURI()).build();
+            body.subscribe(dataBuffer -> {
+                InputStream inputStream = dataBuffer.asInputStream();
+                try {
+                    builder.append(StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8));
+                } catch (IOException e) {
+                    log.error(e.getMessage(), e);
+                }
+            });
+            // 重写请求体,因为请求体数据只能被消费一次
+            request = new ServerHttpRequestDecorator(serverHttpRequest) {
+                @Override
+                public Flux<DataBuffer> getBody() {
+                    return Flux.just(new NettyDataBufferFactory(ByteBufAllocator.DEFAULT)
+                            .wrap(builder.toString().getBytes(StandardCharsets.UTF_8)));
+                }
+            };
+        }
+        //排除url
         log.debug("request uri : {}",  uri);
+        String[] urlArr = sysConfig.getUrlExclude().split(",");
+        boolean bool = false;
+        AntPathMatcher matcher = new AntPathMatcher();
+        for (int i = 0; i < urlArr.length; i++) {
+           if(matcher.match(urlArr[i],path)){
+               bool = true;
+               break;
+           }
+        }
+        InetSocketAddress remoteAddress = request.getRemoteAddress();
+        if(bool){
+            return chain.filter(exchange.mutate().request(request).build()).then(Mono.fromRunnable(() -> {
+                ServerHttpResponse response = exchange.getResponse();
+                HttpStatus statusCode = response.getStatusCode();
+                log.debug("请求路径:{},远程IP地址:{},请求方法:{},请求参数:{},目标URI:{},响应码:{}",
+                        path, remoteAddress, method, builder.toString(), uri, statusCode);
+            }));
+        }
+
+        //携带token url
+        String token = request.getQueryParams().getFirst("token");
         ServerHttpResponse response = exchange.getResponse();
         JSONObject result = new JSONObject();
 
@@ -68,12 +133,16 @@ public class AuthConvertFilter implements GlobalFilter, Ordered {
             DataBuffer buffer = response.bufferFactory().wrap(result.toString().getBytes());
             return response.writeWith(Mono.just(buffer));
         }
+
+
         log.debug("loginBean:{}",userLoginBean.getUser());
         //向headers中放文件，记得build
-        ServerHttpRequest host = exchange.getRequest().mutate()
-                .header("Authorization", "Bearer "+userLoginBean.getJwt().getAccess_token()).build();
+        Consumer<HttpHeaders> httpHeaders = httpHeader -> {
+            httpHeader.set("Authorization", "Bearer "+userLoginBean.getJwt().getAccess_token());
+        };
+        ServerHttpRequest serverHttpRequest = exchange.getRequest().mutate().headers(httpHeaders).build();
         //将现在的request 变成 change对象
-        ServerWebExchange build = exchange.mutate().request(host).build();
+        ServerWebExchange build = exchange.mutate().request(serverHttpRequest).build();
         return chain.filter(build);
     }
 

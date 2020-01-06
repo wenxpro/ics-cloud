@@ -30,30 +30,28 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: ics-api
+        - id: api
           uri: lb://ics-api
           predicates:
-            - Method=GET,POST
             - Path=/api/**
           filters:
             - StripPrefix=1
             - AddResponseHeader=X-Response-Default-Foo, Default-Bar
-            - name: Hystrix
-              args:
-                name: fallbackcmd
-                fallbackUri: forward:/common/fallback
+#            - name: Hystrix
+#              args:
+#                name: fallbackcmd
+#                fallbackUri: forward:/common/fallback
         - id: ics-uaa
           uri: lb://ics-uaa
           predicates:
-            - Method=GET,POST
             - Path=/uaa/**
           filters:
             - StripPrefix=1
             - AddResponseHeader=X-Response-Default-Foo, Default-Bar
-            - name: Hystrix
-              args:
-                name: fallbackcmd
-                fallbackUri: forward:/common/fallback
+#            - name: Hystrix
+#              args:
+#                name: fallbackcmd
+#                fallbackUri: forward:/common/fallback
 
 logging:
   level:
@@ -63,3 +61,7 @@ logging:
   file: log/ics-gateway/log.log
 
 management.endpoints.web.exposure.include: '*'
+
+sys-config:
+  urlExclude: "**/*.css,**/*.html,**/*.js,/uaa/oauth/**,/user/login,/user/register"
+
