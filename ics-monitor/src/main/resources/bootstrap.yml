@@ -90,7 +90,7 @@ spring:
 security:
   oauth2:
     client:
-      client-id: ics-monitor
+      client-id: ${spring.application.name}
       client-secret: 123456
       user-authorization-uri: ${auth-server}/oauth/authorize
       access-token-uri: ${auth-server}/oauth/token
@@ -109,6 +109,5 @@ logging:
     com.ics.cloud: debug
 #    org.springframework.web: debug
 #    org.springframework.security: DEBUG
-  file: log/ics-monitor/log.log
-sys-config:
-  tokenkeyPrefex: token
+  file: log/${spring.application.name}/log.log
+

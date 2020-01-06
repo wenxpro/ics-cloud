@@ -68,7 +68,7 @@ logging:
     com.ics.cloud: DEBUG
   #    com.netflix: DEBUG
   #    org.springframework.cloud.gateway: trace
-  file: log/ics-gateway/log.log
+  file: log/${spring.application.name}/log.log
 
 management.endpoints.web.exposure.include: '*'
 

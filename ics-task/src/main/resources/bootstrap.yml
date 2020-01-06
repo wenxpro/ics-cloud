@@ -95,6 +95,6 @@ logging:
     com.ics.cloud: debug
 #    org.springframework.web: debug
 #    org.springframework.security: DEBUG
-  file: log/ics-task/log.log
+  file: log/${spring.application.name}/log.log
 sys-config:
   tokenkeyPrefex: token
