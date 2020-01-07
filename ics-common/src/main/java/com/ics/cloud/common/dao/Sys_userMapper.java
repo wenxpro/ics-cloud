@@ -56,7 +56,7 @@ public interface Sys_userMapper {
             "</script>")
     Sys_user queryUserBySelective(@Param("record") Sys_user record);
 
-    @Cacheable(cacheNames = "sys_user", keyGenerator = "cloudKeyGenerator")
+//    @Cacheable(cacheNames = "sys_user", keyGenerator = "cloudKeyGenerator")
     @Select("select id,username,password from sys_user where username = #{name} limit 1")
     Sys_user queryUserByName(@Param("name") String name);
 

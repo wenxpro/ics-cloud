@@ -47,10 +47,20 @@ spring:
           filters:
             - StripPrefix=1
             - AddResponseHeader=X-Response-Default-Foo, Default-Bar
-#            - name: Hystrix
-#              args:
-#                name: fallbackcmd
-#                fallbackUri: forward:/common/fallback
+            - name: Hystrix
+                args:
+                  name: fallbackcmd
+                  fallbackUri: forward:/common/fallback
+            - name: RequestRateLimiter
+                args:
+                  redis-rate-limiter.replenishRate: 10
+                  redis-rate-limiter.burstCapacity: 20
+                  key-resolver: "#{@hostAddrKeyResolver}"
+            - name: Retry
+                args:
+                  retries: 3
+                  statuses: BAD_GATEWAY
+
         - id: ics-uaa
           uri: lb://ics-uaa
           predicates:
@@ -58,10 +68,19 @@ spring:
           filters:
             - StripPrefix=1
             - AddResponseHeader=X-Response-Default-Foo, Default-Bar
-#            - name: Hystrix
-#              args:
-#                name: fallbackcmd
-#                fallbackUri: forward:/common/fallback
+            - name: Hystrix
+              args:
+                name: fallbackcmd
+                fallbackUri: forward:/common/fallback
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 10
+                redis-rate-limiter.burstCapacity: 20
+                key-resolver: "#{@hostAddrKeyResolver}"
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY
 
 logging:
   level:
