@@ -9,17 +9,10 @@ import reactor.core.publisher.Mono;
 /**
  * 根据用户ip 进行限流
  */
-@Configuration
 public class HostAddrKeyResolver implements KeyResolver {
 
     @Override
     public Mono<String> resolve(ServerWebExchange exchange) {
         return Mono.just(exchange.getRequest().getRemoteAddress().getAddress().getHostAddress());
-    }
-
-
-    @Bean
-    public HostAddrKeyResolver hostAddrKeyResolver() {
-        return new HostAddrKeyResolver();
     }
 }
