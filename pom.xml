@@ -62,12 +62,13 @@
 
     <build>
         <plugins>
-            <!-- Compiler 插件, 设定 JDK 版本 -->
+
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <!--指定编译时的jdk版本1.8 -->
                 <configuration>
-                    <showWarnings>true</showWarnings>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
 
